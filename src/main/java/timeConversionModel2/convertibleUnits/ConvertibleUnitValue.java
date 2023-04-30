@@ -26,6 +26,9 @@ public class ConvertibleUnitValue<T extends ConvertibleUnit> {
     public final double convert(@NotNull Class<? extends T> unit,
                                 @NotNull UnitConversionTable<T> conversionTable)
             throws NullUnitConversionException {
+        if (unit == this.unit) {
+            return value;
+        }
         @Nullable SingleCoefficientOperation conversion = conversionTable.getConversion(this.unit, unit);
         if (conversion == null) {
             throw new NullUnitConversionException();

@@ -13,7 +13,9 @@ import timeConversionModel2.time.*;
 //TODO: finish this
 public class Test {
     private static final @NotNull Duration @NotNull [] TESTABLE_DURATIONS = new Duration[] {
-            new Duration(12, TimeUnit.Minute.class)
+            new Duration(12, TimeUnit.Minute.class),
+            new Duration(36, TimeUnit.Second.class),
+            new Duration(0.5, TimeUnit.Hour.class)
     };
 
     public static void main(String[] args) {
@@ -23,11 +25,13 @@ public class Test {
     }
 
     private Test(@NotNull Duration duration) {
+        printLine(null);
         printLine("duration: " + duration.getValue() + " " + getUnitAbbreviation(duration.getUnit()));
         printLine(new SeparatorString().getString());
         printConverted(duration, TimeUnit.Second.class);
         printConverted(duration, TimeUnit.Minute.class);
         printConverted(duration, TimeUnit.Hour.class);
+        printLine(null);
     }
 
     private @Nullable TimeUnit getUnitInstance(@NotNull Class<? extends TimeUnit> unit) {
