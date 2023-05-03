@@ -12,12 +12,12 @@ public abstract class PlanetaryDay extends PlanetSpecificTimeUnit {
     private static final @NotNull String COMMON_SUFFIX = " days";
 
     //
-    public PlanetaryDay(@NotNull String planetName) {
+    protected PlanetaryDay(@NotNull String planetName) {
         this(planetName, null);
     }
 
     //
-    public PlanetaryDay(@NotNull String planetName, @Nullable String abbreviation) {
+    protected PlanetaryDay(@NotNull String planetName, @Nullable String abbreviation) {
         super(prepareName(planetName), Objects.requireNonNullElse(abbreviation, prepareAbbreviation(planetName)));
     }
 
