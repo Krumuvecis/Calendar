@@ -7,9 +7,9 @@ import unitConversion.convertibleUnits.UnitConversionTable;
 
 //TODO: add javadocs
 public class TimeUnitConversionTable extends UnitConversionTable<TimeUnit> {
+    //
     public static final @NotNull TimeUnitConversionTable STATIC_TABLE = new TimeUnitConversionTable();
 
-    //
     private TimeUnitConversionTable() {
         super();
         addConversion(

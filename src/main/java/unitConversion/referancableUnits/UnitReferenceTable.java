@@ -8,9 +8,11 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 //For referencing unit instances
+//TODO: add javadocs
 public class UnitReferenceTable<T extends ReferencableUnit> {
     private final @NotNull Map<@NotNull Class<? extends T>, @NotNull T> referenceTable;
 
+    //
     public UnitReferenceTable() {
         referenceTable = new HashMap<>();
     }
@@ -19,6 +21,7 @@ public class UnitReferenceTable<T extends ReferencableUnit> {
         return referenceTable.containsKey(unit);
     }
 
+    //
     public @Nullable T getReference(@NotNull Class<? extends T> unit) {
         if (isDefined(unit)) {
             return referenceTable.get(unit);
@@ -27,6 +30,7 @@ public class UnitReferenceTable<T extends ReferencableUnit> {
         }
     }
 
+    //
     public void addReference(@NotNull Class<? extends T> unit) {
         if (!isDefined(unit)) {
             referenceTable.put(unit, getNewUnitInstance(unit));
