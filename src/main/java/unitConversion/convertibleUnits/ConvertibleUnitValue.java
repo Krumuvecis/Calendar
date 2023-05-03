@@ -4,9 +4,14 @@ import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import unitConversion.mathOperations.SingleCoefficientOperation;
+import unitConversion.referancableUnits.ReferenceEnumInterface;
+import unitConversion.referancableUnits.UndefinedEnumReferenceException;
+import unitConversion.referancableUnits.UnitReferenceTable;
 
 //TODO: add javadocs; what about setters?
-public class ConvertibleUnitValue<T extends ConvertibleUnit> {
+public abstract class ConvertibleUnitValue<
+        K extends ReferenceEnumInterface,
+        T extends ConvertibleUnit<? extends K>> {
     @SuppressWarnings("FieldMayBeFinal")
     private double value;
     @SuppressWarnings("FieldMayBeFinal")

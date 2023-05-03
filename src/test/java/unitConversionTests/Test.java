@@ -8,12 +8,13 @@ import consoleUtils.stringTools.SeparatorString;
 
 import unitConversion.convertibleUnits.NullUnitConversionException;
 import timeUnits.*;
-import timeUnits.units.*;
+import timeUnits.units.si.*;
 
 //TODO: finish this
 public class Test {
     private static final @NotNull Duration @NotNull [] TESTABLE_DURATIONS = new Duration[] {
             new Duration(12, Minute.class),
+            new Duration(12, SITimeUnitEnum.MINUTE),
             new Duration(36, Second.class),
             new Duration(0.5, Hour.class)
     };
@@ -34,29 +35,35 @@ public class Test {
         printLine(null);
     }
 
-    private @Nullable TimeUnit getUnitInstance(@NotNull Class<? extends TimeUnit> unit) {
-        return TimeUnitReferenceTable.STATIC_TABLE.getReference(unit);
+    @SuppressWarnings({"DataFlowIssue", "unchecked"})
+    private @Nullable TimeUnit<? extends TimeUnitEnumInterface> getUnitInstanceByClass(@NotNull Class<? extends TimeUnit<? extends TimeUnitEnumInterface>> unit) {
+        return TimeUnitReferences.SI.getInstanceByClass((Class<? extends SITimeUnit>) unit);
     }
 
-    private @NotNull String getUnitName(@NotNull Class<? extends TimeUnit> unit) {
-        @Nullable TimeUnit unitInstance = getUnitInstance(unit);
-        if (unitInstance == null) {
+    /*private @Nullable TimeUnit<? extends TimeUnitEnumInterface> getUnitInstanceByEnum(@NotNull TimeUnitEnumInterface e) {
+        return TimeUnitReferences.findClassByEnum(e);
+    }*/
+
+
+    private @NotNull String getUnitName(@NotNull Class<? extends TimeUnit<? extends TimeUnitEnumInterface>> unit) {
+        @Nullable TimeUnit<? extends TimeUnitEnumInterface> instance = getUnitInstanceByClass(unit);
+        if (instance == null) {
             return "null";
         } else {
-            return unitInstance.getName();
+            return instance.getName();
         }
     }
 
-    private @NotNull String getUnitAbbreviation(@NotNull Class<? extends TimeUnit> unit) {
-        @Nullable TimeUnit unitInstance = getUnitInstance(unit);
-        if (unitInstance == null) {
+    private @NotNull String getUnitAbbreviation(@NotNull Class<? extends TimeUnit<? extends TimeUnitEnumInterface>> unit) {
+        @Nullable TimeUnit<? extends TimeUnitEnumInterface> instance = getUnitInstanceByClass(unit);
+        if (instance == null) {
             return "null";
         } else {
-            return unitInstance.getAbbreviation();
+            return instance.getAbbreviation();
         }
     }
 
-    private void printConverted(@NotNull Duration duration, @NotNull Class<? extends TimeUnit> unit) {
+    private void printConverted(@NotNull Duration duration, @NotNull Class<? extends TimeUnit<? extends TimeUnitEnumInterface>> unit) {
         @NotNull String commonString = getUnitName(unit) + ": ";
         try {
             double convertedValue = duration.convert(unit, TimeUnitConversionTable.STATIC_TABLE);

@@ -3,9 +3,10 @@ package unitConversion.convertibleUnits;
 import org.jetbrains.annotations.NotNull;
 
 import unitConversion.referancableUnits.ReferencableUnit;
+import unitConversion.referancableUnits.ReferenceEnumInterface;
 
 //TODO: add javadocs
-abstract class NamedUnit extends ReferencableUnit {
+abstract class NamedUnit<T extends ReferenceEnumInterface> extends ReferencableUnit<T> {
     private final @NotNull String name, abbreviation;
 
     //
