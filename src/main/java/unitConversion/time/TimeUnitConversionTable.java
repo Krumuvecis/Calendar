@@ -1,9 +1,9 @@
-package timeConversionModel2.time;
+package unitConversion.time;
 
 import org.jetbrains.annotations.NotNull;
 
-import timeConversionModel2.mathOperations.Multiplication;
-import timeConversionModel2.convertibleUnits.UnitConversionTable;
+import unitConversion.mathOperations.particularOperations.Multiplication;
+import unitConversion.convertibleUnits.UnitConversionTable;
 
 //TODO: add javadocs
 public class TimeUnitConversionTable extends UnitConversionTable<TimeUnit> {

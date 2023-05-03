@@ -1,8 +1,8 @@
-package timeConversionModel2.time;
+package unitConversion.time;
 
 import org.jetbrains.annotations.NotNull;
 
-import timeConversionModel2.convertibleUnits.ConvertibleUnitValue;
+import unitConversion.convertibleUnits.ConvertibleUnitValue;
 
 //
 public class Duration extends ConvertibleUnitValue<TimeUnit> {

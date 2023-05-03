@@ -1,4 +1,4 @@
-package timeConversionModel2.mathOperations;
+package unitConversion.mathOperations;
 
 //TODO: add javadocs
 public abstract class SingleCoefficientOperation implements SingleVariableOperation, InvertibleOperation {

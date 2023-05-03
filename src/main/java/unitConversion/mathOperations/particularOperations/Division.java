@@ -1,6 +1,8 @@
-package timeConversionModel2.mathOperations;
+package unitConversion.mathOperations.particularOperations;
 
 import org.jetbrains.annotations.NotNull;
+import unitConversion.mathOperations.InvertibleOperation;
+import unitConversion.mathOperations.SingleCoefficientOperation;
 
 //TODO: add javadocs
 public final class Division extends SingleCoefficientOperation {

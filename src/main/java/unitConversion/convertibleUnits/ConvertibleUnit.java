@@ -1,4 +1,4 @@
-package timeConversionModel2.convertibleUnits;
+package unitConversion.convertibleUnits;
 
 import org.jetbrains.annotations.NotNull;
 

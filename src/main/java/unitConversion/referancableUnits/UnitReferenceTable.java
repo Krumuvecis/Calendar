@@ -1,4 +1,4 @@
-package timeConversionModel2.referancableUnits;
+package unitConversion.referancableUnits;
 
 import java.util.Map;
 import java.util.HashMap;
@@ -7,6 +7,7 @@ import java.lang.reflect.InvocationTargetException;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
+//For referencing unit instances
 public class UnitReferenceTable<T extends ReferencableUnit> {
     private final @NotNull Map<@NotNull Class<? extends T>, @NotNull T> referenceTable;
 

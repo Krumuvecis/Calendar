@@ -1,8 +1,8 @@
-package timeConversionModel2.time;
+package unitConversion.time;
 
 import org.jetbrains.annotations.NotNull;
 
-import timeConversionModel2.convertibleUnits.ConvertibleUnit;
+import unitConversion.convertibleUnits.ConvertibleUnit;
 
 //TODO: add javadocs
 public abstract class TimeUnit extends ConvertibleUnit {

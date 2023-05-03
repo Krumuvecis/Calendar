@@ -6,8 +6,8 @@ import org.jetbrains.annotations.Nullable;
 import static consoleUtils.SimplePrinting.printLine;
 import consoleUtils.stringTools.SeparatorString;
 
-import timeConversionModel2.convertibleUnits.NullUnitConversionException;
-import timeConversionModel2.time.*;
+import unitConversion.convertibleUnits.NullUnitConversionException;
+import unitConversion.time.*;
 
 //tests model 2
 //TODO: finish this

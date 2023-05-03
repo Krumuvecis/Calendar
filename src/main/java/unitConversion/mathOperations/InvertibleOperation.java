@@ -1,8 +1,8 @@
-package timeConversionModel2.mathOperations;
+package unitConversion.mathOperations;
 
 import org.jetbrains.annotations.NotNull;
 
 //TODO: add javadocs
-interface InvertibleOperation {
+public interface InvertibleOperation {
     @NotNull InvertibleOperation getInverse();
 }

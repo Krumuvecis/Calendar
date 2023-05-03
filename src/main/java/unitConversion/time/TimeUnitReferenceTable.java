@@ -1,8 +1,8 @@
-package timeConversionModel2.time;
+package unitConversion.time;
 
 import org.jetbrains.annotations.NotNull;
 
-import timeConversionModel2.referancableUnits.UnitReferenceTable;
+import unitConversion.referancableUnits.UnitReferenceTable;
 
 //
 public class TimeUnitReferenceTable extends UnitReferenceTable<TimeUnit> {

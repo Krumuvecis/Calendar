@@ -1,4 +1,4 @@
-package convertibleUnits.unitConversion;
+package unitConversion.convertibleUnits;
 
 /**
  * TODO: finish javadocs

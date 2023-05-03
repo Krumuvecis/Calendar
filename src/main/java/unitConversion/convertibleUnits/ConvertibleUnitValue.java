@@ -1,9 +1,9 @@
-package timeConversionModel2.convertibleUnits;
+package unitConversion.convertibleUnits;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-import timeConversionModel2.mathOperations.SingleCoefficientOperation;
+import unitConversion.mathOperations.SingleCoefficientOperation;
 
 //TODO: add javadocs
 public class ConvertibleUnitValue<T extends ConvertibleUnit> {
