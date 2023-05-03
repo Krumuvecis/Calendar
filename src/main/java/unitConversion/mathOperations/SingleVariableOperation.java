@@ -1,6 +1,14 @@
 package unitConversion.mathOperations;
 
-//TODO: add javadocs
+/**
+ * TODO: finish this javadoc
+ */
 public interface SingleVariableOperation {
+    /**
+     * Perform the operation.
+     *
+     * @param variable The variable.
+     * @return Result.
+     */
     double calculate(double variable);
 }
