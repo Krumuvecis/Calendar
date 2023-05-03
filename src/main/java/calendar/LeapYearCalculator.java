@@ -6,7 +6,7 @@ package calendar;
  *  * except when divisible by 100
  *      * doesn't hold when divisible by 400
  */
-public class LeapYears {
+public class LeapYearCalculator {
     public static boolean isLeapYear(int year) {
         return (isDivisibleBy4(year) && (!isDivisibleBy100(year) || isDivisibleBy400(year)));
     }

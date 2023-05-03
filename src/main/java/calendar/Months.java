@@ -17,7 +17,7 @@ public class Months {
         Map<Integer, Month> months;
 
         Year(int number) {
-            this(LeapYears.isLeapYear(number));
+            this(LeapYearCalculator.isLeapYear(number));
         }
 
         Year(boolean leapYear) {

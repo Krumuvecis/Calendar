@@ -4,7 +4,7 @@ import org.jetbrains.annotations.NotNull;
 
 import static consoleUtils.SimplePrinting.printLine;
 
-import calendar.LeapYears;
+import calendar.LeapYearCalculator;
 
 //
 public class LeapYearTest {
@@ -20,7 +20,7 @@ public class LeapYearTest {
 
     private LeapYearTest(int year) {
         printLine("Year: " + year);
-        if (LeapYears.isLeapYear(year)) {
+        if (LeapYearCalculator.isLeapYear(year)) {
             printLine("A leap year!");
         } else {
             printLine("Not a leap year.");
