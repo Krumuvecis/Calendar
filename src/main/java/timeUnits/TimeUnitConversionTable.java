@@ -1,9 +1,10 @@
-package unitConversion.time;
+package timeUnits;
 
 import org.jetbrains.annotations.NotNull;
 
 import unitConversion.mathOperations.particularOperations.Multiplication;
 import unitConversion.convertibleUnits.UnitConversionTable;
+import timeUnits.units.*;
 
 //TODO: add javadocs
 public class TimeUnitConversionTable extends UnitConversionTable<TimeUnit> {
@@ -13,10 +14,10 @@ public class TimeUnitConversionTable extends UnitConversionTable<TimeUnit> {
     private TimeUnitConversionTable() {
         super();
         addConversion(
-                TimeUnit.Minute.class, TimeUnit.Second.class,
+                Minute.class, Second.class,
                 new Multiplication(60));
         addConversion(
-                TimeUnit.Hour.class, TimeUnit.Minute.class,
+                Hour.class, Minute.class,
                 new Multiplication(60));
     }
 }

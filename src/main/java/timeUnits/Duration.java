@@ -1,4 +1,4 @@
-package unitConversion.time;
+package timeUnits;
 
 import org.jetbrains.annotations.NotNull;
 

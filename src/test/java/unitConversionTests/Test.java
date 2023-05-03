@@ -1,4 +1,4 @@
-package model2test;
+package unitConversionTests;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -7,15 +7,15 @@ import static consoleUtils.SimplePrinting.printLine;
 import consoleUtils.stringTools.SeparatorString;
 
 import unitConversion.convertibleUnits.NullUnitConversionException;
-import unitConversion.time.*;
+import timeUnits.*;
+import timeUnits.units.*;
 
-//tests model 2
 //TODO: finish this
 public class Test {
     private static final @NotNull Duration @NotNull [] TESTABLE_DURATIONS = new Duration[] {
-            new Duration(12, TimeUnit.Minute.class),
-            new Duration(36, TimeUnit.Second.class),
-            new Duration(0.5, TimeUnit.Hour.class)
+            new Duration(12, Minute.class),
+            new Duration(36, Second.class),
+            new Duration(0.5, Hour.class)
     };
 
     public static void main(String[] args) {
@@ -28,9 +28,9 @@ public class Test {
         printLine(null);
         printLine("duration: " + duration.getValue() + " " + getUnitAbbreviation(duration.getUnit()));
         printLine(new SeparatorString().getString());
-        printConverted(duration, TimeUnit.Second.class);
-        printConverted(duration, TimeUnit.Minute.class);
-        printConverted(duration, TimeUnit.Hour.class);
+        printConverted(duration, Second.class);
+        printConverted(duration, Minute.class);
+        printConverted(duration, Hour.class);
         printLine(null);
     }
 

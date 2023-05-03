@@ -1,8 +1,9 @@
-package unitConversion.time;
+package timeUnits;
 
 import org.jetbrains.annotations.NotNull;
 
 import unitConversion.referancableUnits.UnitReferenceTable;
+import timeUnits.units.*;
 
 //For referencing time unit instances
 //TODO: add javadocs
@@ -12,8 +13,8 @@ public class TimeUnitReferenceTable extends UnitReferenceTable<TimeUnit> {
 
     private TimeUnitReferenceTable() {
         super();
-        addReference(TimeUnit.Second.class);
-        addReference(TimeUnit.Minute.class);
-        addReference(TimeUnit.Hour.class);
+        addReference(Second.class);
+        addReference(Minute.class);
+        addReference(Hour.class);
     }
 }
