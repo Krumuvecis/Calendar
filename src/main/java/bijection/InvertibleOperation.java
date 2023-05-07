@@ -1,4 +1,4 @@
-package unitConversion.mathOperations;
+package bijection;
 
 import org.jetbrains.annotations.NotNull;
 

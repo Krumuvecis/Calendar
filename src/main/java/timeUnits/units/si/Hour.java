@@ -6,7 +6,7 @@ import org.jetbrains.annotations.NotNull;
 public final class Hour extends SITimeUnit {
     //
     public Hour() {
-        super("Hour", "h");
+        super("h", "hour", 'H');
     }
 
     //

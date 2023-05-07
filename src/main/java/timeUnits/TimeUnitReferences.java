@@ -2,10 +2,10 @@ package timeUnits;
 
 import org.jetbrains.annotations.NotNull;
 
-import unitConversion.referancableUnits.UndefinedEnumReferenceException;
 import timeUnits.units.si.SITimeUnitEnum;
 import timeUnits.units.si.SITimeUnit;
-import timeUnits.units.planetSpecific.*;
+import timeUnits.units.planetSpecific.PlanetSpecificTimeUnitEnum;
+import timeUnits.units.planetSpecific.PlanetSpecificTimeUnit;
 import timeUnits.units.householdUnits.HouseholdTimeUnitEnum;
 import timeUnits.units.householdUnits.HouseholdTimeUnit;
 import timeUnits.referenceTables.*;

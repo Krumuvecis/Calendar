@@ -6,7 +6,7 @@ import org.jetbrains.annotations.NotNull;
 public final class Week extends HouseholdTimeUnit {
     //
     public Week() {
-        super("Week", "w");
+        super("w", "week", 'w');
     }
 
     //

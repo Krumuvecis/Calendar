@@ -6,7 +6,7 @@ import org.jetbrains.annotations.NotNull;
 public final class Second extends SITimeUnit {
     //
     public Second() {
-        super("Second", "s");
+        super("s", "second", 'S');
     }
 
     //

@@ -1,7 +1,7 @@
-package unitConversion.mathOperations;
+package bijection;
 
 //TODO: add javadocs
-public abstract class SingleCoefficientOperation implements SingleVariableOperation, InvertibleOperation {
+public abstract class SingleCoefficientOperation extends SingleVariableOperation implements InvertibleOperation {
     private final double coefficient;
 
     //

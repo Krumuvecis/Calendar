@@ -6,7 +6,7 @@ import org.jetbrains.annotations.NotNull;
 public final class Year extends HouseholdTimeUnit {
     //
     public Year() {
-        super("Year", "y");
+        super("y", "year", 'Y');
     }
 
     //

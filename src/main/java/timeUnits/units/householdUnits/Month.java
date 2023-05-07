@@ -6,7 +6,7 @@ import org.jetbrains.annotations.NotNull;
 public final class Month extends HouseholdTimeUnit {
     //
     public Month() {
-        super("Month", "M");
+        super("M", "month", 'M');
     }
 
     //

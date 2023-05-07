@@ -6,7 +6,7 @@ import java.util.HashMap;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-import unitConversion.mathOperations.SingleCoefficientOperation;
+import bijection.SingleCoefficientOperation;
 import unitConversion.referancableUnits.ReferenceEnumInterface;
 
 //TODO: add javadocs

@@ -3,10 +3,9 @@ package unitConversion.convertibleUnits;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-import unitConversion.mathOperations.SingleCoefficientOperation;
+import bijection.ArgumentOutOfDomainException;
+import bijection.SingleCoefficientOperation;
 import unitConversion.referancableUnits.ReferenceEnumInterface;
-import unitConversion.referancableUnits.UndefinedEnumReferenceException;
-import unitConversion.referancableUnits.UnitReferenceTable;
 
 //TODO: add javadocs; what about setters?
 public abstract class ConvertibleUnitValue<
@@ -44,7 +43,11 @@ public abstract class ConvertibleUnitValue<
         if (conversion == null) {
             throw new NullUnitConversionException();
         } else {
-            return conversion.calculate(value);
+            try {
+                return conversion.calculate(value);
+            } catch (ArgumentOutOfDomainException e) {
+                throw new RuntimeException(e);
+            }
         }
     }
 }

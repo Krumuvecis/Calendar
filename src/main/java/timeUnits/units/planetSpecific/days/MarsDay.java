@@ -8,7 +8,7 @@ import timeUnits.units.planetSpecific.PlanetSpecificTimeUnitEnum;
 public final class MarsDay extends PlanetaryDay {
     //
     public MarsDay() {
-        super("Mars", "SOL");
+        super("SOL", "Mars");
     }
 
     //

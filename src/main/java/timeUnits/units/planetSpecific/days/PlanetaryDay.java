@@ -1,7 +1,5 @@
 package timeUnits.units.planetSpecific.days;
 
-import java.util.Objects;
-
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -9,23 +7,17 @@ import timeUnits.units.planetSpecific.PlanetSpecificTimeUnit;
 
 //TODO: add javadocs
 public abstract class PlanetaryDay extends PlanetSpecificTimeUnit {
-    private static final @NotNull String COMMON_SUFFIX = " days";
+    private static final @NotNull String
+            NAME_SUFFIX = " day",
+            ABBREVIATION_SUFFIX = NAME_SUFFIX + "s";
 
     //
-    public PlanetaryDay(@NotNull String planetName) {
-        this(planetName, null);
+    protected PlanetaryDay(@NotNull String planetName) {
+        this(null, planetName);
     }
 
     //
-    public PlanetaryDay(@NotNull String planetName, @Nullable String abbreviation) {
-        super(prepareName(planetName), Objects.requireNonNullElse(abbreviation, prepareAbbreviation(planetName)));
-    }
-
-    private static @NotNull String prepareName(@NotNull String planetName) {
-        return planetName + COMMON_SUFFIX;
-    }
-
-    private static @NotNull String prepareAbbreviation(@NotNull String planetName) {
-        return prepareName(planetName);
+    protected PlanetaryDay(@Nullable String abbreviation, @NotNull String planetName) {
+        super(abbreviation, ABBREVIATION_SUFFIX, planetName, NAME_SUFFIX);
     }
 }
