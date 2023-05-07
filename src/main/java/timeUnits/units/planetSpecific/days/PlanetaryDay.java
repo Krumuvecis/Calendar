@@ -7,7 +7,9 @@ import timeUnits.units.planetSpecific.PlanetSpecificTimeUnit;
 
 //TODO: add javadocs
 public abstract class PlanetaryDay extends PlanetSpecificTimeUnit {
-    private static final @NotNull String NAME_SUFFIX = " day", ABBREVIATION_SUFFIX = NAME_SUFFIX + "s";
+    private static final @NotNull String
+            NAME_SUFFIX = " day",
+            ABBREVIATION_SUFFIX = NAME_SUFFIX + "s";
 
     //
     protected PlanetaryDay(@NotNull String planetName) {
