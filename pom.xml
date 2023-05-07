@@ -6,7 +6,7 @@
 
     <groupId>com.github.Krumuvecis</groupId>
     <artifactId>Calendar</artifactId>
-    <version>0.3</version>
+    <version>0.4</version>
     <packaging>jar</packaging>
 
     <properties>
@@ -31,5 +31,4 @@
             <version>${consoleUtils.version}</version>
         </dependency>
     </dependencies>
-
 </project>
