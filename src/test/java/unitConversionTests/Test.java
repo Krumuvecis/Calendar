@@ -6,9 +6,11 @@ import org.jetbrains.annotations.Nullable;
 import static consoleUtils.SimplePrinting.printLine;
 import consoleUtils.stringTools.SeparatorString;
 
+import unitConversion.namedUnits.NamedUnit;
 import unitConversion.convertibleUnits.NullUnitConversionException;
 import timeUnits.*;
 import timeUnits.units.si.*;
+import unitConversion.referancableUnits.ReferenceEnumInterface;
 
 //TODO: finish this
 public class Test {
@@ -46,7 +48,7 @@ public class Test {
 
 
     private @NotNull String getUnitName(@NotNull Class<? extends TimeUnit<? extends TimeUnitEnumInterface>> unit) {
-        @Nullable TimeUnit<? extends TimeUnitEnumInterface> instance = getUnitInstanceByClass(unit);
+        @Nullable NamedUnit<? extends ReferenceEnumInterface> instance = getUnitInstanceByClass(unit);
         if (instance == null) {
             return "null";
         } else {
@@ -55,7 +57,7 @@ public class Test {
     }
 
     private @NotNull String getUnitAbbreviation(@NotNull Class<? extends TimeUnit<? extends TimeUnitEnumInterface>> unit) {
-        @Nullable TimeUnit<? extends TimeUnitEnumInterface> instance = getUnitInstanceByClass(unit);
+        @Nullable NamedUnit<? extends ReferenceEnumInterface> instance = getUnitInstanceByClass(unit);
         if (instance == null) {
             return "null";
         } else {

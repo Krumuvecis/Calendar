@@ -6,7 +6,7 @@ import org.jetbrains.annotations.NotNull;
 public final class Minute extends SITimeUnit {
     //
     public Minute() {
-        super("Minute", "min");
+        super("min", "minute", 'M');
     }
 
     //

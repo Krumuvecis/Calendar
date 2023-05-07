@@ -1,9 +1,9 @@
-package unitConversion.mathOperations.particularOperations;
+package bijection.particularOperations;
 
 import org.jetbrains.annotations.NotNull;
 
-import unitConversion.mathOperations.SingleCoefficientOperation;
-import unitConversion.mathOperations.InvertibleOperation;
+import bijection.InvertibleOperation;
+import bijection.SingleCoefficientOperation;
 
 //TODO: add javadocs
 public final class Multiplication extends SingleCoefficientOperation {

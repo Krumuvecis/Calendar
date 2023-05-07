@@ -6,7 +6,7 @@ import org.jetbrains.annotations.NotNull;
 public final class Day extends HouseholdTimeUnit {
     //
     public Day() {
-        super("Day", "d");
+        super("d", "day", 'D');
     }
 
     //

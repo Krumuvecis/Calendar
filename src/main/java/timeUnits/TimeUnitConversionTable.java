@@ -2,7 +2,7 @@ package timeUnits;
 
 import org.jetbrains.annotations.NotNull;
 
-import unitConversion.mathOperations.particularOperations.Multiplication;
+import bijection.particularOperations.Multiplication;
 import unitConversion.convertibleUnits.UnitConversionTable;
 import timeUnits.units.si.*;
 

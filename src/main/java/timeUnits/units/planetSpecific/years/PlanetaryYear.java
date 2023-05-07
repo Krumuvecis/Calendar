@@ -1,7 +1,5 @@
 package timeUnits.units.planetSpecific.years;
 
-import java.util.Objects;
-
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -10,24 +8,16 @@ import timeUnits.units.planetSpecific.PlanetSpecificTimeUnit;
 //TODO: add javadocs
 public abstract class PlanetaryYear extends PlanetSpecificTimeUnit {
     private static final @NotNull String
-            COMMON_NAME_SUFFIX = " tropical years",
-            COMMON_ABBREVIATION_SUFFIX = " years";
+            ABBREVIATION_SUFFIX = " years",
+            NAME_SUFFIX = " tropical year";
 
     //
     protected PlanetaryYear(@NotNull String planetName) {
-        this(planetName, null);
+        this(null, planetName);
     }
 
     //
-    protected PlanetaryYear(@NotNull String planetName, @Nullable String abbreviation) {
-        super(prepareName(planetName), Objects.requireNonNullElse(abbreviation, prepareAbbreviation(planetName)));
-    }
-
-    private static @NotNull String prepareName(@NotNull String planetName) {
-        return planetName + COMMON_NAME_SUFFIX;
-    }
-
-    private static @NotNull String prepareAbbreviation(@NotNull String planetName) {
-        return planetName + COMMON_ABBREVIATION_SUFFIX;
+    protected PlanetaryYear(@Nullable String abbreviation, @NotNull String planetName) {
+        super(abbreviation, ABBREVIATION_SUFFIX, planetName, NAME_SUFFIX);
     }
 }
